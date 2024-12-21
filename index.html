@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ada</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script> 
+</head>
+<body>
+    <header>
+        <div class="menu">
+            <button class="login-button">Login</button>
+            <button>О салоне</button>
+            <button>Галерея</button>
+        </div>
+        <div class="logo">
+            <img src="assets/img/LogoAda.png" alt="Логотип">
+        </div>
+    </header>
+    <div class="slider">
+        <button class="prev">&#10094;</button>
+        <img src="assets/img/salon1.jpg" alt="Слайд 1">
+        <img src="assets/img/salon2.jpg" alt="Слайд 2">
+        <img src="assets/img/salon4.jpg" alt="Слайд 3">
+        <button class="next">&#10095;</button>
+    </div>
+    <div class="video-section">
+        <h2>Наши работы</h2>
+        <video controls>
+            <source src="assets/video/videoADA.mp4" type="video/mp4">
+            Ваш браузер не поддерживает воспроизведение видео.
+        </video>
+    </div>
+    <div class="schedule">
+        <table>
+            <thead>
+                <tr>
+                    <th>День недели</th>
+                    <th>Часы работы</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Понедельник</td>
+                    <td>10:00 - 22:00</td>
+                </tr>
+                <tr>
+                    <td>Вторник</td>
+                    <td>10:00 - 22:00</td>
+                </tr>
+                <tr>
+                    <td>Среда</td>
+                    <td>10:00 - 22:00</td>
+                </tr>
+                <tr>
+                    <td>Четверг</td>
+                    <td>10:00 - 22:00</td>
+                </tr>
+                <tr>
+                    <td>Пятница</td>
+                    <td>10:00 - 22:00</td>
+                </tr>
+                <tr>
+                    <td>Суббота</td>
+                    <td>10:00 - 22:00</td>
+                </tr>
+                <tr>
+                    <td>Воскресенье</td>
+                    <td>Выходной</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="note">Работаем без перерывов</div>
+    </div>
+    <footer>
+        <div class="social-links">
+            <a href="#">ВКонтакте</a>
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+        </div>
+        <p>&copy; 2024 Ada. Все права защищены.</p>
+    </footer>
+
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <h3>Вход</h3>
+            <form id="login-form">
+                <input type="email" id="login-email" placeholder="E-mail" required>
+                <input type="password" id="login-password" placeholder="Пароль" required>
+                <button type="submit">Войти</button>
+                <button type="button" class="forgot-password-button">Забыл пароль</button>
+                <button type="button" class="open-register-modal">Регистрация</button>
+                <button type="button" class="close-login-modal">Закрыть</button>
+            </form>            
+        </div>
+    </div>
+
+    <div id="about-modal" class="modal">
+        <div class="modal-content">
+            <h3>О салоне</h3>
+            <p id="about-description">"Ада" – это уютный маникюрный салон, где каждая деталь создана для вашего комфорта и красоты. Профессиональные мастера, стильный дизайн и внимательный подход подарят вашим ногтям безупречный вид и настроение.</p>
+            <button type="button" class="close-about-modal">Закрыть</button>
+        </div>
+    </div>
+
+    <div id="register-modal" class="modal">
+        <div class="modal-content">
+            <h3>Регистрация</h3>
+            <form id="register-form">
+                <input type="email" id="email" placeholder="E-mail" required>
+                <input type="password" id="password" placeholder="Пароль" required>
+                <input type="password" id="confirm-password" placeholder="Подтвердите пароль" required>
+                <button type="submit">Зарегистрироваться</button>
+                <button type="button" class="close-register-modal">Закрыть</button>
+            </form>
+        </div>
+    </div>
+    <div id="gallery-modal" class="modal">
+        <div class="modal-content">
+            <h3>Галерея</h3>
+            <div class="gallery">
+                <img src="assets/img/aaa.jpg" alt="Фото 1" class="gallery-img">
+                <img src="assets/img/bbb.jpg" alt="Фото 2" class="gallery-img">
+                <img src="assets/img/images.jpg" alt="Фото 3" class="gallery-img">
+                <img src="assets/img/salon1.jpg" alt="Фото 3" class="gallery-img">
+                <img src="assets/img/salon2.jpg" alt="Фото 3" class="gallery-img">
+                <img src="assets/img/salon3.jpg" alt="Фото 3" class="gallery-img">
+                <img src="assets/img/salon4.jpg" alt="Фото 3" class="gallery-img">
+            </div>
+            <button type="button" class="close-gallery-modal">Закрыть</button>
+        </div>
+    </div>
+
+    <div id="full-image-modal" class="modal">
+        <div class="modal full-image-modal" style="max-width: 90%; max-height: 90%; padding: 0;">
+            <img id="full-image" src="" alt="Просмотр фото" style="max-width: 100%; max-height: 100%; display: block; margin: auto;">
+            <button type="button" class="close-full-image-modal">Закрыть</button>
+        </div>
+    </div>
+
+    <div id="reset-password-modal" class="modal">
+        <div class="modal-content">
+            <h3>Восстановление пароля</h3>
+            <form id="reset-password-form">
+                <input type="email" id="reset-email" placeholder="E-mail" required>
+                <input type="password" id="new-password" placeholder="Новый пароль" required>
+                <input type="password" id="confirm-new-password" placeholder="Подтвердите новый пароль" required>
+                <button type="submit">Сбросить пароль</button>
+                <button type="button" class="close-reset-password-modal">Закрыть</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html> 
